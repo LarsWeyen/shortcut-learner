@@ -1,0 +1,52 @@
+.playarea-container{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 1rem;
+    height: 100dvh; 
+    max-height: 100dvh;
+}
+
+.editor-container{
+    border-left: hsla(0, 0%, 100%, 0.25) 1px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.code-example-container{
+    width: fit-content;
+    height: fit-content;
+    background-color: #171717;
+    margin-left: 5rem;
+}
+
+.code-example-header{
+    background-color: #111111;
+    height: 38px;
+    width: 100%;
+}
+
+.syntax code{
+    font-size: 16px;
+}
+
+.editor-input{
+    font-size: 16px;
+    background-color: #1d1f24;
+    border: none;
+    width: 78%;
+    padding-block: 8px;
+    color: #abb2bf;
+    font-family: monospace;
+}
+
+.editor-input:focus, .editor-input:focus{
+    outline: none;
+}
+
+.editor-input-container{
+    padding-inline: 20px;
+    background-color: #1d1f24;
+}
+
