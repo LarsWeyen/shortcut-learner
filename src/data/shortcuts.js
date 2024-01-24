@@ -28,6 +28,12 @@ var shortcuts =[
         instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='Shift'>Shift</code> and <code id='k'>K</code> to delete that line",
         function: "deleteLine",
         keys:["Control","Shift","k"]
+    },
+    {
+        name: "shortcut 6",
+        instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='['>[</code> or <code id=']'>]</code> to indent or outdent that line",
+        function: "indentOrOutdentLine",
+        keys:["Control","]","["]
     }
 ]
 

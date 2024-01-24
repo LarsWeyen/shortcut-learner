@@ -77,3 +77,16 @@ export const deleteLine = (e,index,inputRefs) => {
         line.remove()    
     }
 }
+
+export const indentOrOutdentLine = (e,index,inputRefs) => {
+    var line = inputRefs[index].current
+    if(e.ctrlKey && e.keyCode === 221){
+        line.value = "     "  + line.value;
+    }
+
+    if(e.ctrlKey && e.keyCode === 219){
+        if (line.value.startsWith("     ")) {
+            line.value = line.value.substring(5);
+        }
+    }
+}
