@@ -102,3 +102,16 @@ export const endOrBeginningLine = (e,inputRefs) => {
         lastLine.focus();
     }
 }
+
+export const toggleLineComment = (e,index,inputRefs) => {
+    var line = inputRefs[index].current
+    if(e.ctrlKey && e.keyCode === 191){
+        if (line.value.startsWith(" // ")) {
+            line.value = line.value.substring(4);
+        }
+        else{
+            line.value = " // "  + line.value;
+        }
+    }
+    
+}
