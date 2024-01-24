@@ -90,3 +90,15 @@ export const indentOrOutdentLine = (e,index,inputRefs) => {
         }
     }
 }
+
+export const endOrBeginningLine = (e,inputRefs) => {
+    var firstLine = inputRefs[0].current
+    var lastLine = inputRefs[inputRefs.length - 1].current
+    
+    if(e.ctrlKey && e.keyCode === 36){
+        firstLine.focus();
+    }
+    if(e.ctrlKey && e.keyCode === 35){
+        lastLine.focus();
+    }
+}

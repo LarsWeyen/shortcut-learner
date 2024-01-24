@@ -34,6 +34,12 @@ var shortcuts =[
         instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='['>[</code> or <code id=']'>]</code> to indent or outdent that line",
         function: "indentOrOutdentLine",
         keys:["Control","]","["]
+    },
+    {
+        name: "shortcut 7",
+        instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='End'>End</code> or <code id='Home'>Home</code> to move to the beginning or end of the file",
+        function: "endOrBeginningLine",
+        keys:["Control","Home","End"]
     }
 ]
 
