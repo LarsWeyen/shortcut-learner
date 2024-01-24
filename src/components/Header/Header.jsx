@@ -7,7 +7,9 @@ const Header = ({name,instruction, onNextClick,keys}) => {
   
   const handleKeyPress = (e) => {
     if(keys.includes(e.key)){
-      pressedKeys.push(e.key);
+      if(!pressedKeys.includes(e.key)){
+        pressedKeys.push(e.key);
+      }
       const elementId = keys[keys.indexOf(e.key)];
       document.getElementById(elementId).classList.add('active-key')     
       if(pressedKeys.length === keys.length){
