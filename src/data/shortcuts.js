@@ -22,6 +22,12 @@ var shortcuts =[
         instruction: "While your cursor is in a line press <code id='Shift'>Shift</code> <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> or <code id='ArrowDown'>ArrowUp</code> to copy that line",
         function: "copyLine",
         keys:["Shift","Alt","ArrowUp","ArrowDown"]
+    },
+    {
+        name: "shortcut 5",
+        instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='Shift'>Shift</code> and <code id='k'>K</code> to delete that line",
+        function: "deleteLine",
+        keys:["Control","Shift","k"]
     }
 ]
 

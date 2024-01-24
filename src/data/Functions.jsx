@@ -57,18 +57,23 @@ export const copyLine = (e, index, inputRefs) => {
         if(e.altKey){
             if(e.key == "ArrowUp" || e.key == "ArrowDown"){
                 var newLine = document.createElement('input');
-            newLine.type="text"
-            newLine.value=line.value
-            newLine.classList.add('editor-input')
-            console.log(line.previousElementSibling)
+                newLine.type="text"
+                newLine.value=line.value
+                newLine.classList.add('editor-input')
             
                 td.insertBefore(newLine, line.previousElementSibling.nextElementSibling);
                 line.focus();
-            
             }
-           
-            
         }
     }
-    
+}
+
+export const deleteLine = (e,index,inputRefs) => {
+    var line = inputRefs[index].current
+
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 75){   
+        e.preventDefault();
+        e.stopPropagation();
+        line.remove()    
+    }
 }
