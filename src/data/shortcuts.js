@@ -13,9 +13,15 @@ var shortcuts =[
     },
     {
         name: "shortcut 3",
-        instruction: "While your cursor is in a line press <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> to move that line upwards or downwards",
+        instruction: "While your cursor is in a line press <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> or <code id='ArrowDown'>ArrowUp</code> to move that line upwards or downwards",
         function: "moveLine",
-        keys:["Alt","ArrowUp"]
+        keys:["Alt","ArrowUp","ArrowDown"]
+    },
+    {
+        name: "shortcut 4",
+        instruction: "While your cursor is in a line press <code id='Shift'>Shift</code> <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> or <code id='ArrowDown'>ArrowUp</code> to copy that line",
+        function: "copyLine",
+        keys:["Shift","Alt","ArrowUp","ArrowDown"]
     }
 ]
 

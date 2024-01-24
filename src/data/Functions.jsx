@@ -26,9 +26,9 @@ export const selectText = (e,index, inputRefs) =>{
     }
 }
 
-export const moveLine = (e, index, inputRefs,lines) => {
-    var span = inputRefs[index].current,
-    td = span.parentNode;
+export const moveLine = (e, index, inputRefs) => {
+    var line = inputRefs[index].current,
+    td = line.parentNode;
     var direction;
     if(e.altKey){
         if(e.key == "ArrowUp"){
@@ -38,13 +38,37 @@ export const moveLine = (e, index, inputRefs,lines) => {
             direction = 1
         }
     
-        if (direction === -1 && span.previousElementSibling) {
-            td.insertBefore(span, span.previousElementSibling);
-            span.focus();
-        } else if (direction === 1 && span.nextElementSibling) {
-            td.insertBefore(span, span.nextElementSibling.nextElementSibling)
-            span.focus();
+        if (direction === -1 && line.previousElementSibling) {
+            td.insertBefore(line, line.previousElementSibling);
+            line.focus();
+        } else if (direction === 1 && line.nextElementSibling) {
+            td.insertBefore(line, line.nextElementSibling.nextElementSibling)
+            line.focus();
         }
     }
     
 };
+
+export const copyLine = (e, index, inputRefs) => {
+    var line = inputRefs[index].current,
+    td = line.parentNode;
+ 
+    if(e.shiftKey){
+        if(e.altKey){
+            if(e.key == "ArrowUp" || e.key == "ArrowDown"){
+                var newLine = document.createElement('input');
+            newLine.type="text"
+            newLine.value=line.value
+            newLine.classList.add('editor-input')
+            console.log(line.previousElementSibling)
+            
+                td.insertBefore(newLine, line.previousElementSibling.nextElementSibling);
+                line.focus();
+            
+            }
+           
+            
+        }
+    }
+    
+}
