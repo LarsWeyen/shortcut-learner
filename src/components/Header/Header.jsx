@@ -6,17 +6,13 @@ const Header = ({name,instruction, onNextClick,keys}) => {
   const [disabled, setDisabled] = useState(true);
   
   const handleKeyPress = (e) => {
-    
-    if(keys.includes(e.key)){
-      if(!pressedKeys.includes(e.key)){
-        pressedKeys.push(e.key);
-      }
-
+    if(keys.includes(e.key) && !pressedKeys.includes(e.key)){
       const elementId = keys[keys.indexOf(e.key)];
       document.getElementById(elementId).classList.add('active-key')     
-      if(pressedKeys.length === keys.length){
-        setDisabled(false);
-      }
+      pressedKeys.push(e.key)
+    }
+    if(pressedKeys.length === keys.length){
+      setDisabled(false);
     }
   }
 
