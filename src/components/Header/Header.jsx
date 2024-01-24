@@ -16,7 +16,6 @@ const Header = ({name,instruction, onNextClick,keys}) => {
     }
   }
   useEffect(()=>{
-    console.log(keys)
     document.addEventListener('keydown',handleKeyPress)
   })
   return (
