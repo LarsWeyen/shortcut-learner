@@ -7,13 +7,13 @@ var shortcuts =[
     },
     {
         name: "Shortcut 2",
-        instruction: "Put your cursor on a word and press <code id='Alt'>ALT</code> <code id='Shift'>Shift</code> <code id='ArrowRight'>--></code> to select that word",
+        instruction: "Put your cursor on a word and press <code id='Alt'>Alt</code> <code id='Shift'>Shift</code> <code id='ArrowRight'>--></code> to select that word",
         function: "selectText",
         keys:["Alt","Shift","ArrowRight"]
     },
     {
         name: "Shortcut 3",
-        instruction: "While your cursor is in a line press <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> or <code id='ArrowDown'>ArrowUp</code> to move that line upwards or downwards",
+        instruction: "While your cursor is in a line press <code id='Alt'>Alt</code> and <code id='ArrowUp'>Arrow Up</code> or <code id='ArrowDown'>Arrow Down</code> to move that line upwards or downwards",
         function: "moveLine",
         keys:["Alt","ArrowUp","ArrowDown"]
     },
@@ -43,7 +43,7 @@ var shortcuts =[
     },
     {
         name: "Shortcut 8",
-        instruction: "While your cursor is in a line press <code id='Shift'>Shift</code> <code id='Alt'>ALT</code> and <code id='ArrowUp'>ArrowUp</code> or <code id='ArrowDown'>ArrowUp</code> to copy that line",
+        instruction: "While your cursor is in a line press <code id='Shift'>Shift</code> <code id='Alt'>Alt</code> and <code id='ArrowUp'>Arrow Up</code> or <code id='ArrowDown'>Arrow Down</code> to copy that line",
         function: "copyLine",
         keys:["Shift","Alt","ArrowUp","ArrowDown"]
     }
