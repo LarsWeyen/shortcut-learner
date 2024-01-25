@@ -25,9 +25,9 @@ var shortcuts =[
     },
     {
         name: "shortcut 5",
-        instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='Shift'>Shift</code> and <code id='k'>K</code> to delete that line",
+        instruction: "While your cursor is in a line press <code id='Control'>Ctrl</code> <code id='Shift'>Shift</code> and <code id='K'>K</code> to delete that line",
         function: "deleteLine",
-        keys:["Control","Shift","k"]
+        keys:["Control","Shift","K"]
     },
     {
         name: "shortcut 6",
