@@ -70,10 +70,11 @@ export const copyLine = (e, index, inputRefs) => {
 
 export const deleteLine = (e,index,inputRefs) => {
     var line = inputRefs[index].current
-
+    
     if (e.ctrlKey && e.shiftKey && e.keyCode === 75){   
         e.preventDefault();
         e.stopPropagation();
+       
         line.remove()    
     }
 }
@@ -91,7 +92,7 @@ export const indentOrOutdentLine = (e,index,inputRefs) => {
     }
 }
 
-export const endOrBeginningLine = (e,inputRefs) => {
+export const endOrBeginningLine = (e,index,inputRefs) => {
     var firstLine = inputRefs[0].current
     var lastLine = inputRefs[inputRefs.length - 1].current
     
@@ -106,11 +107,11 @@ export const endOrBeginningLine = (e,inputRefs) => {
 export const toggleLineComment = (e,index,inputRefs) => {
     var line = inputRefs[index].current
     if(e.ctrlKey && e.keyCode === 191){
-        if (line.value.startsWith(" // ")) {
-            line.value = line.value.substring(4);
+        if (line.value.startsWith(" //")) {
+            line.value = line.value.substring(3);
         }
         else{
-            line.value = " // "  + line.value;
+            line.value = " //"  + line.value;
         }
     }
     
