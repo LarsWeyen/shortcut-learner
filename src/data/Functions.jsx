@@ -52,7 +52,7 @@ export const moveLine = (e, index, inputRefs) => {
 export const copyLine = (e, index, inputRefs) => {
     var line = inputRefs[index].current,
     td = line.parentNode;
- 
+    
     if(e.shiftKey){
         if(e.altKey){
             if(e.key == "ArrowUp" || e.key == "ArrowDown"){
@@ -60,6 +60,7 @@ export const copyLine = (e, index, inputRefs) => {
                 newLine.type="text"
                 newLine.value=line.value
                 newLine.classList.add('editor-input')
+                newLine.classList.add('new-line')
             
                 td.insertBefore(newLine, line.previousElementSibling.nextElementSibling);
                 line.focus();
@@ -70,17 +71,16 @@ export const copyLine = (e, index, inputRefs) => {
 
 export const deleteLine = (e,index,inputRefs) => {
     var line = inputRefs[index].current
-    
     if (e.ctrlKey && e.shiftKey && e.keyCode === 75){   
         e.preventDefault();
-        e.stopPropagation();
-       
+        
         line.remove()    
     }
 }
 
 export const indentOrOutdentLine = (e,index,inputRefs) => {
     var line = inputRefs[index].current
+    
     if(e.ctrlKey && e.keyCode === 221){
         line.value = "     "  + line.value;
     }
