@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './components/Header/Header'
 import { Routes, Route } from 'react-router-dom'
 import LandingPage from './scenes/LandingPage/LandingPage'
-import PlayArea from './scenes/playarea/PlayArea'
+import PlayArea from './scenes/PlayArea/PlayArea'
 
 function App() {
   
