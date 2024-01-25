@@ -12,19 +12,30 @@
     height: 100%;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .code-example-container{
-    width: fit-content;
-    height: fit-content;
+    max-width: 90%;
+    width: 90%;
+    max-height: 90%;
     background-color: #171717;
     margin-left: 5rem;
+    overflow: scroll;
 }
 
 .code-example-header{
     background-color: #111111;
     height: 38px;
     width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.code-example-header span {
+    font-family: monospace;
+    margin-left: 1rem;
+    font-weight: 700;
 }
 
 .syntax code{
@@ -35,10 +46,11 @@
     font-size: 16px;
     background-color: #1d1f24;
     border: none;
-    width: 78%;
+    width: 90%;
     padding-block: 8px;
     color: #abb2bf;
     font-family: monospace;
+    width: 100%;
 }
 
 .editor-input:focus, .editor-input:focus{

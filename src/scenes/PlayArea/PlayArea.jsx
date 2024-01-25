@@ -23,7 +23,7 @@ const PlayArea = () => {
       <div className='editor-container'>
         <div className='code-example-container'>
             <div className='code-example-header'>
-
+              <span>example.css</span>
             </div>
             <div className='code-example'>
               <CodeEditor handleSpecificFunction={functions[shortcut.function]} />     
