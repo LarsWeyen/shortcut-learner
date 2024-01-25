@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import playArea from '../../assets/PlayArea.png'
+
 import './landingPage.css'
 
 const LandingPage = () => {
@@ -15,7 +17,7 @@ const LandingPage = () => {
         </Link>
       </div>
       <div>
-
+        <img className='hero-image' src={playArea} alt="code editor" />
       </div>
     </div>
   )

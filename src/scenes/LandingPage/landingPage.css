@@ -41,3 +41,15 @@
     transform: translate(0, -3px);
     box-shadow: 0 15px 60px -8px var(--primary);
 }
+
+.hero-image{
+    width: 90%;
+    height: fit-content;
+}
+
+@media only screen and (max-width: 1700px) {
+    .hero-image{width: 80%;}
+  }
+@media only screen and (max-width: 600px) {
+    .hero-image{width: 60%;}
+  }
